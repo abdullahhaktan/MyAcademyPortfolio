@@ -1,0 +1,32 @@
+﻿@model List<SocialMedia>
+
+@*
+    Default Social Media Component
+*@
+
+<div class="social-links d-flex justify-content-center">
+    @foreach(var item in Model)
+    {
+        if(item.Name.ToLower()=="instagram")
+        {
+            item.Icon = "bi bi-instagram";
+        }
+        else if (item.Name.ToLower() == "linkedin")
+        {
+            item.Icon = "bi bi-linkedin";
+        }
+        else if (item.Name.ToLower() == "facebook")
+        {
+            item.Icon = "bi bi-facebook";
+        }
+        else if (item.Name.ToLower() == "twitter")
+        {
+            item.Icon = "bi bi-twitter-x";
+        }
+        else
+        {
+            item.Icon = "bi bi-globe";
+        }
+        <a href="@item.Url" target="_blank"><i class="@item.Icon"></i></a>
+    }
+</div>

@@ -1,0 +1,43 @@
+﻿@model Project
+
+@{
+    ViewData["Title"] = "Proje ekle";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<form action="/Project/CreateProject/" method="post">
+    <div class="form-group">
+        <label>Proje Görsel Url</label>
+        <input type="text" class="form-control" asp-for="ImageUrl" />
+        <span class="text-danger" asp-validation-for="ImageUrl"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Proje Adı</label>
+        <input type="text" class="form-control" asp-for="ProjectName" />
+        <span class="text-danger" asp-validation-for="ProjectName"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Proje Açıklaması</label>
+        <textarea type="text" class="form-control" asp-for="Description" rows="3" /></textarea>
+        <span class="text-danger" asp-validation-for="Description"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Github Url</label>
+        <input type="url" class="form-control" asp-for="GithubUrl" />
+        <span class="text-danger" asp-validation-for="GithubUrl"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Kategori</label>
+        <select class="form-control" asp-for="CategoryId" asp-items="@ViewBag.categories">
+            <option disabled  selected>Kategori Seçiniz</option>
+        </select>
+        <span class="text-danger" asp-validation-for="CategoryId"></span>
+    </div>
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+
+</form>

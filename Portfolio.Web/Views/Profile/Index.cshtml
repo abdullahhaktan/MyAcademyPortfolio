@@ -1,0 +1,46 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<form method="post">
+
+    <input type="hidden" asp-for="UserId" />
+
+    <input type="hidden" asp-for="FirstName" />
+    <input type="hidden" asp-for="LastName" />
+
+    <div class="form-group">
+        <label>kullanıcı adı</label>
+        <input type="text" class="form-control" asp-for="UserName" />
+        <span class="text-danger" asp-validation-for="UserName"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Eski şifre</label>
+        <input type="text" class="form-control" asp-for="Password" />
+        <span class="text-danger" asp-validation-for="Password"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Yeni şifre</label>
+        <input type="text" class="form-control" name="Password1" />
+    </div>
+
+    <div class="form-group">
+        <label>Yebi şifre onay</label>
+        <input type="text" class="form-control" name="Password2" />
+    </div>
+
+    <div class="container" >
+        @if (TempData["message"] != null)
+        {
+            <h5 style="color:red">@(TempData["message"])</h5>
+        }
+    </div>
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+
+</form>

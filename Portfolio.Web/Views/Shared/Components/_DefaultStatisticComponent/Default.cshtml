@@ -1,0 +1,116 @@
+﻿
+@*
+   Default Statisctic Component
+*@
+
+<section id="stats" class="stats section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>istatistikler</h2>
+        <p>istatistiksel bilgilerimi aşağıdaki barlar ile inceleyebilirsiniz</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.projectCount" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Proje Sayısı</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.skillAverage" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Yeteneklerin Ortalaması</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.unreadMessageCount" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Okunmamış mesaj sayısı</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span style="font-size:35px">@ViewBag.lastMessageOwner</span>
+                    <p>Son mesaj kimden</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+        </div>
+
+        <div class="row gy-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.experienceYear" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Toplam deneyim yılı</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.companyCount" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Çalışılan şirket sayısı</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.reviewAverage" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Değerlendirme ortalaması</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span style="font-size:35px">@ViewBag.maxReviewOwner</span>
+                    <p>En yüksek değerlendirme kimden</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+        </div>
+
+        <div class="row gy-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.skillCount" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Yetenek sayısı</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.HighSkills" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Yüksek seviyedeki yetenek sayısı</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.projectCount" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Toplam proje sayısı</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span style="font-size:32px">@ViewBag.mostProjectCategory</span>
+                    <p>En çok hangi kategoriden proje var</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+        </div>
+
+
+
+    </div>
+
+</section>

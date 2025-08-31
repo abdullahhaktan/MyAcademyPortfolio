@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_AdminLayoutHeadComponentPartial")
+
+<body data-pc-preset="preset-1" data-pc-direction="ltr" data-pc-theme="light">
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("_AdminLayoutSideBarComponentPartial")
+
+    @await Component.InvokeAsync("_AdminLayoutHeaderComponentPartial")
+
+    <div class="pc-container">
+        <div class="pc-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-header-title">
+                                <h3 class="m-b-10">@ViewData["Title"]</h3>
+                            </div>
+                            <br />
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/Statistics/Index/">Ana Sayfa</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0)">@ViewData["Title"]</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @RenderBody()
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("_AdminLayoutFooterComponentPartial")
+
+    @await Component.InvokeAsync("_AdminLayoutScriptsComponentPartial")
+
+</body>
+
+</html>

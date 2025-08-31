@@ -1,0 +1,102 @@
+﻿@model List<Skill>
+
+@{
+    ViewData["Title"] = "Yetenekler";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+@{
+    int count = 0;
+}
+
+<style>
+    /* Varsayılan stilleri sıfırla */
+    progress {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+    }
+
+        /* WebKit (Chrome, Safari, Edge) ve Mozilla (Firefox) için arka plan rengi */
+        progress::-webkit-progress-bar,
+        progress::-moz-progress-bar {
+            background-color: #f3f3f3;
+        }
+
+        /* Yüzdelik değerin rengini yönet */
+        progress.progress-green::-webkit-progress-value {
+            background-color: #4caf50;
+        }
+
+        progress.progress-orange::-webkit-progress-value {
+            background-color: #ff9800;
+        }
+
+        progress.progress-red::-webkit-progress-value {
+            background-color: #f44336;
+        }
+
+        /* Firefox için -moz- ön eki */
+        progress.progress-green::-moz-progress-bar {
+            background-color: #4caf50;
+        }
+
+        progress.progress-orange::-moz-progress-bar {
+            background-color: #ff9800;
+        }
+
+        progress.progress-red::-moz-progress-bar {
+            background-color: #f44336;
+        }
+</style>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Yetenek Başlığı</th>
+        <th>Yüzde</th>
+        <th>Aksiyonlar</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        var progressClass = item.Percentage >= 85 ? "progress-green" :
+        item.Percentage >= 50 ? "progress-orange" :
+        "progress-red";
+        <tr>
+            <td>@item.SkillId</td>
+            <td>@item.Title</td>
+            <td>
+                <progress class="@progressClass" value="@item.Percentage" max="100"></progress>
+                @item.Percentage%
+            </td>
+            <td>
+                <buton onclick="deleteSkill(@item.SkillId)" class="btn btn-outline-danger">Sill</buton>
+                <a href="/Skill/UpdateSkill/@item.SkillId" class="btn btn-outline-info">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="/Skill/CreateSkill" class="btn btn-outline-primary">Yeni Yetenek Oluştur</a>
+
+<script>
+    function deleteSkill(id)
+    {
+                            Swal.fire({
+          title: "Silmek istediğinize emin misiniz?",
+          text: "Bunu geri alamazsınız!",
+          icon: "uyarı",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Evet Sil",
+          cancelButtonText: "İptal!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+              window.location.href = "/Skill/DeleteSkill/"+id;
+          }
+        });
+    }
+</script>

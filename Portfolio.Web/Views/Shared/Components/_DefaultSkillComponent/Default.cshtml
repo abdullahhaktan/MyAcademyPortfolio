@@ -1,0 +1,61 @@
+﻿@model List<Skill>
+
+@*
+    Default Skill Component
+*@
+
+<section id="skills" class="skills section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Yeteneklerim</h2>
+        <p>Aşağıdan Yeteneklerimi inceleyebilirsiniz</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+            @if (Model.Count() <= 3)
+            {
+                <div class="col-lg-6">
+                    @foreach (var item in Model)
+                    {
+                        <div class="progress">
+                            <span class="skill"><span>@item.Title</span> <i class="val">@item.Percentage%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="@item.Percentage" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <!-- Veriler 4 veya daha fazlaysa, 2 sütuna böl -->
+                <div class="col-lg-6">
+                    @foreach (var item in Model.Take(Model.Count() / 2 + Model.Count() % 2)) // İlk yarı
+                    {
+                        <div class="progress">
+                            <span class="skill"><span>@item.Title</span> <i class="val">@item.Percentage%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="@item.Percentage" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="col-lg-6">
+                    @foreach (var item in Model.Skip(Model.Count() / 2 + Model.Count() % 2)) // İkinci yarı
+                    {
+                        <div class="progress">
+                            <span class="skill"><span>@item.Title</span> <i class="val">@item.Percentage%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="@item.Percentage" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,68 @@
+﻿@{
+    var educationExperiences = ViewBag.educationExperience as List<Education>;
+}
+
+@model List<Experience>
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<section id="resume" class="resume section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>CV</h2>
+        <p>Aşağıda eğitim ve deneyimimi inceleyebilirsiniz</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="resume-title">Özet</h3>
+
+                <div class="resume-item pb-0">
+                    <h4>@ViewBag.user</h4>
+                    <p><em></em></p>
+                    <ul>
+                        <li>@ViewBag.city</li>
+                        <li>@ViewBag.phone</li>
+                        <li>@ViewBag.mail</li>
+                    </ul>
+                </div><!-- Edn Resume Item -->
+
+                <h3 class="resume-title">Eğitim</h3>
+                @foreach (var item in educationExperiences)
+                {
+                    <div class="resume-item">
+                        <h4>@item.SchoolName</h4>
+                        <h5>@item.StartYear - @item.EndYear</h5>
+                        <p><em>@item.Department</em></p>
+                        <p>@item.Description</p>
+                    </div><!-- Edn Resume Item -->
+                }
+
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="resume-title">İş deneyimi</h3>
+                @foreach(var item in Model)
+                {
+                    <div class="resume-item">
+                        <h4></h4>
+                        <h5>@item.StartYear - @item.EndYear</h5>
+                        <p><em>@item.City, Turkiye </em></p>
+                        <ul>
+                            <li>@item.Description</li>
+                        </ul>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

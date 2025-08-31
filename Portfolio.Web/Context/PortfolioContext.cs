@@ -19,6 +19,12 @@ namespace Portfolio.Web.Context
         public DbSet<Education> Educations { get; set; }
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<Skill> Skills { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<UserMessage> UserMessages { get; set; }
+        public DbSet<ContactInfo> ContactInfos { get; set; }
+        public DbSet<SocialMedia> SocialMedias { get; set; }
+        public DbSet<User> Users { get; set; }
 
     }
 }

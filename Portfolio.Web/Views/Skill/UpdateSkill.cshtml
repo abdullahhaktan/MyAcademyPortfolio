@@ -1,0 +1,27 @@
+﻿@model Skill
+
+@{
+    ViewData["Title"] = "Yetenek güncelle";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+
+<form method="post">
+
+    <input type="hidden" asp-for="SkillId" />
+
+    <div class="form-group">
+        <label>Yetenek başlık</label>
+        <input type="text" class="form-control" asp-for="Title" />
+    </div>
+
+    <div class="form-group">
+        <label>Yüzde</label>
+        <input type="text" class="form-control" asp-for="Percentage" />
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary">Güncelle</button>
+
+</form>
+
+

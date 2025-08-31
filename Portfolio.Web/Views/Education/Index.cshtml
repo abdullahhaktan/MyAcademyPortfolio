@@ -1,0 +1,40 @@
+﻿@model List<Education>
+
+@{
+    ViewData["Title"] = "Deneyimler";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+@{
+    int count = 0;
+}
+
+<table class="table table-borderer table-hover">
+    <tr>
+        <th>#</th>
+        <th>Okul</th>
+        <th>Bölüm</th>
+        <th>Başlama yılı</th>
+        <th>Bitiş yılı</th>
+        <th>Açıklama</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.SchoolName</td>
+            <td>@item.Department</td>
+            <td>@item.StartYear</td>
+            <td>@item.EndYear</td>
+            <td>@item.Description</td>
+            <td>
+                <a href="/Education/DeleteEducation/@item.EducationId" class="btn btn-outline-danger">Sil</a>
+                <br />
+                <a href="/Education/UpdateEducation/@item.EducationId" class="btn btn-outline-info">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="/Education/CreateEducation" class="btn btn-outline-primary">Yeni Deneyim Oluştur</a> 

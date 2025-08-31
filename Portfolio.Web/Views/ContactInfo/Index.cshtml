@@ -1,0 +1,44 @@
+﻿@model List<ContactInfo>
+@{
+    ViewData["Title"] = "İletişim bilgileri";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+@{
+    int count = 0;
+}
+
+<table class="table table-borderer table-hover">
+    <tr>
+        <th>#</th>
+        <th>Adres</th>
+        <th>Telefon numarası</th>
+        <th>Email</th>
+        <th>Harita Url</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.Address</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.Email</td>
+            @{
+                if(item.MapUrl.Length<=50)
+                {
+                    <td>@item.MapUrl</td>
+                }
+                else
+                {
+                    <td>@item.MapUrl.Substring(0, Math.Min(50, item.MapUrl.Length)) ...</td>
+                }
+            }
+            <td>
+                <a href="/ContactInfo/DeleteContactInfo/@item.ContactInfoId" class="btn btn-outline-danger">Sil</a>
+                <a href="/ContactInfo/UpdateContactInfo/@item.ContactInfoId" class="btn btn-outline-info">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>

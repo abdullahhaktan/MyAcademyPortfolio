@@ -1,0 +1,47 @@
+﻿@*
+    Default Sende Message Component
+*@
+
+<div class="col-lg-7">
+    <form method="post" action="/Default/SendMessage" data-aos="fade-up" data-aos-delay="200">
+        <div class="row gy-4">
+
+            <div class="col-md-6">
+                <label for="name-field" class="pb-2">Adınız</label>
+                <input type="text" name="Name" class="form-control" required="">
+            </div>
+
+            <div class="col-md-6">
+                <label for="email-field" class="pb-2">Mail Adresiniz</label>
+                <input type="email" name="Email" class="form-control" required="">
+            </div>
+
+            <div class="col-md-12">
+                <label for="subject-field" class="pb-2">Konu</label>
+                <input type="text" name="Subject" class="form-control" required="">
+            </div>
+
+            <div class="col-md-12">
+                <label for="message-field" class="pb-2">Mesaj</label>
+                <textarea class="form-control" name="MessageBody" rows="10" required=""></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button class="btn btn-primary" type="submit" onclick="sendMessage()">Send Message</button>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<script>
+    function sendMessage() {
+           Swal.fire({
+      title: "Mesajınız başarıyla gönderildi!",
+      icon: "success",
+      confirmButtonText: "Tamam",
+      draggable: true,
+    });
+    }
+</script>
+
