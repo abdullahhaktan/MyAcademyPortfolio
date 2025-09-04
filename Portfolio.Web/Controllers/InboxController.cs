@@ -1,29 +1,44 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portfolio.Web.Context;
-using System.Reflection.Metadata.Ecma335;
+using System.Linq;
 
 namespace Portfolio.Web.Controllers
 {
-    public class InboxController(PortfolioContext context) : Controller
+    public class InboxController : Controller
     {
-        public IActionResult Index()
+        private readonly PortfolioContext _context;
+
+        public InboxController(PortfolioContext context)
         {
-            var values = context.UserMessages.ToList();
-            return View(values);
+            _context = context;
         }
 
-        public IActionResult MessageDetail(int id)
+        public IActionResult Index()
         {
-            var message = context.UserMessages.Find(id);
-            return View(message);
+            var values = _context.UserMessages.ToList();
+            return View(values);
         }
 
         public IActionResult DeleteMessage(int id)
         {
-            var message = context.UserMessages.Find(id);
-            context.UserMessages.Remove(message);
-            context.SaveChanges();
+            var message = _context.UserMessages.Find(id);
+            if (message == null) return NotFound();
+
+            _context.UserMessages.Remove(message);
+            _context.SaveChanges();
+
             return RedirectToAction("Index");
         }
+
+        public IActionResult ChangeToRead(int id)
+        {
+            var message = _context.UserMessages.FirstOrDefault(x => x.UserMessageId == id);
+            
+            message.IsRead = true;
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
