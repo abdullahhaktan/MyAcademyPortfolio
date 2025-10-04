@@ -1,24 +1,62 @@
-# 🚀  .NET 9.0 Portfolio Projesi
-# Bu projede, ASP.NET CORE 9.0 Model-View-Controller (MVC) kullanılarak Admin Paneli destekli Portfolio sistemi geliştirilmiştir
+# Net9PortfolioProject
 
-## 📌 Özellikler
+[TR]
 
-- ✅ Mantis-Bootstrap ile güçlü tema
-- ✅ Dinamik veriler
-- ✅ Entity Framework Core ile veritabanı işlemleri
-- ✅ Controller ile sistemin yönetimi
-- ✅ ViewComponent'ler kullanarak yönetimin kolaylaştırılması   
-- ✅ boostrap ile responsive tasarım
+**ASP.NET Core 9.0 MVC ile Geliştirilmiş Yönetici Panelli Portföy Sistemi**
 
+[![.NET Core](https://img.shields.io/badge/.NET_Core-9.0-purple.svg)](https://dotnet.microsoft.com/)
+[![C#](https://img.shields.io/badge/Language-C%23-blue.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
+[![GitHub repo size](https://img.shields.io/github/repo-size/abdullahhaktan/Net9PortfolioProject)](https://github.com/abdullahhaktan/Net9PortfolioProject)
 
-## 🛠 Kullanılan Teknolojiler
+---
 
-- C#  
-- ASP.NET CORE MVC  
-- Razor View Engine
-- Mantis-Bootstrap
+## 💻 Proje Hakkında
 
-- 📸 Proje Görselleri
+---
+
+## ✨ Temel Özellikler
+
+### Mimari ve Teknolojiler
+
+* **ASP.NET CORE 9.0 MVC** mimarisi ve **C#** dili kullanılarak geliştirilmiştir.
+* Görsel katmanda **Razor View Engine** kullanılır.
+* **Entity Framework Core** ile veritabanı işlemleri yönetilir.
+
+### İşlevsel Özellikler ve Tasarım
+
+* Tamamen **Admin Paneli** destekli **dinamik verilerle** çalışan portföy sistemi.
+* Sistem yönetimi, **Controller** yapısı ve yönetimin kolaylaştırılması için **ViewComponent**'ler kullanılarak sağlanmıştır.
+* **Mantis-Bootstrap** ile güçlü ve modern tema desteği.
+* **Responsive tasarım** yapısı.
+
+---
+---
+
+[EN]
+
+## 💻 About the Project
+
+---
+
+## ✨ Core Features
+
+### Architecture and Technologies
+
+* Developed using the **ASP.NET CORE 9.0 MVC** architecture and **C#** language.
+* The **Razor View Engine** is utilized for the presentation layer.
+* Database operations are managed using **Entity Framework Core**.
+
+### Functional Features and Design
+
+* A **Portfolio system** that runs entirely on **dynamic data** with **Admin Panel** support.
+* System management is handled via **Controllers**, and administration is simplified using **ViewComponents**.
+* Strong and modern theme support with **Mantis-Bootstrap**.
+* **Responsive design** structure.
+
+---
+---
+
+- 📸
 
 <img width="947" height="438" alt="foto5" src="https://github.com/user-attachments/assets/4d99e845-1120-4a62-b7c9-db8678367ecd" />
 <img width="951" height="440" alt="foto4" src="https://github.com/user-attachments/assets/2166edd4-19bf-4d9b-a8c6-1b79a26a74a4" />
