@@ -33,13 +33,13 @@
 
 # Depoyu Klonlayın ve Klasöre Girin
 
-git clone https://github.com/abdullahhaktan/MyAcademyPortfolio.git
-cd MyAcademyPortfolio
+* git clone https://github.com/abdullahhaktan/MyAcademyPortfolio.git
+* cd MyAcademyPortfolio
 
 # Context kısmında ilgili yol ve DB adını kendinizie göre ayarlayın ve migrasyonları ekleyip database i güncelleyin
 
-add-migration InitialMigration
-update-database
+* add-migration InitialMigration
+* update-database
 
 
 ---
@@ -70,13 +70,14 @@ update-database
 
 # Clone the Repository and Navigate to the Folder
 
-git clone https://github.com/abdullahhaktan/MyAcademyPortfolio.git
-cd MyAcademyPortfolio
+* git clone https://github.com/abdullahhaktan/MyAcademyPortfolio.git
+* cd MyAcademyPortfolio
 
 # In the Context section, adjust the relevant path and DB name according to your setup, then add migrations and update the database.
 
-add-migration InitialMigration
-update-database
+* add-migration InitialMigration
+* update-database
+
 
 ---
 ---
