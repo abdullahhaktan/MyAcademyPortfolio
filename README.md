@@ -40,6 +40,7 @@
 
 * add-migration InitialMigration
 * update-database
+* sonra projeyi başlatabileceksiniz
 
 
 ---
@@ -77,7 +78,7 @@
 
 * add-migration InitialMigration
 * update-database
-
+* then you will be able to start project
 
 ---
 ---
