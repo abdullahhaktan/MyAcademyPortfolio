@@ -81,7 +81,6 @@
 * then you will be able to start project
 
 ---
----
 
 - 📸
 
