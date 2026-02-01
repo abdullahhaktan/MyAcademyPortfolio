@@ -92,14 +92,6 @@
 
 ---
 
-<img width="940" height="441" alt="foto3" src="https://github.com/user-attachments/assets/51dde19f-6d09-4f3a-b3d8-a641f2dd1a54" />
-
----
-
-<img width="938" height="443" alt="foto2" src="https://github.com/user-attachments/assets/ef109390-d6ab-43b9-98ea-e648083eb9aa" />
-
----
-
 <img width="940" height="439" alt="foto1" src="https://github.com/user-attachments/assets/2fcf192b-d434-4e44-b3b1-63911d935e4e" />
 
 ---
