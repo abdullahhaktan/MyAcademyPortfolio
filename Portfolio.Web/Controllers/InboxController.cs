@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portfolio.Web.Context;
-using System.Linq;
 
 namespace Portfolio.Web.Controllers
 {
@@ -33,7 +32,7 @@ namespace Portfolio.Web.Controllers
         public IActionResult ChangeToRead(int id)
         {
             var message = _context.UserMessages.FirstOrDefault(x => x.UserMessageId == id);
-            
+
             message.IsRead = true;
             _context.SaveChanges();
 

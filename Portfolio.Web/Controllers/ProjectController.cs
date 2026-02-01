@@ -43,12 +43,11 @@ namespace Portfolio.Web.Controllers
         [HttpPost]
         public IActionResult CreateProject(Project project)
         {
-            CategoryDropdown();
-
             var categories = context.Categories.ToList();
 
             if (!ModelState.IsValid)
             {
+                CategoryDropdown();
                 return View(project);
             }
 
@@ -59,7 +58,6 @@ namespace Portfolio.Web.Controllers
 
         public IActionResult UpdateProject(int id)
         {
-
             CategoryDropdown();
             var project = context.Projects.Find(id);
             return View(project);
@@ -69,9 +67,9 @@ namespace Portfolio.Web.Controllers
         [HttpPost]
         public IActionResult UpdateProject(Project model)
         {
-            CategoryDropdown();
             if (!ModelState.IsValid)
             {
+                CategoryDropdown();
                 return View(model);
             }
             context.Projects.Update(model);

@@ -12,7 +12,7 @@ namespace Portfolio.Web.Controllers
             var categories = context.ContactInfos.ToList();
             return View(categories);
         }
-         
+
         [HttpGet]
         public IActionResult CreateContactInfo()
         {

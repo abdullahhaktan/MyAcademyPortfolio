@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.Web.Context;
 using Portfolio.Web.Entities;
-using System.Threading.Tasks;
 
 namespace Portfolio.Web.Controllers
 {

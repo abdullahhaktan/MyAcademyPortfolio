@@ -2,7 +2,7 @@
 
 namespace Portfolio.Web.ViewComponents.AdminLayout
 {
-    public class _AdminLayoutSideBarComponentPartial:ViewComponent
+    public class _AdminLayoutSideBarComponentPartial : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

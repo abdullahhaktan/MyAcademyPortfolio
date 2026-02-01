@@ -3,7 +3,7 @@ using Portfolio.Web.Entities;
 
 namespace Portfolio.Web.Context
 {
-    public class PortfolioContext:DbContext
+    public class PortfolioContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

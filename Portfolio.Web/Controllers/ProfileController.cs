@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portfolio.Web.Context;
 using Portfolio.Web.Entities;
-using System.ComponentModel.Design;
 
 namespace Portfolio.Web.Controllers
 {
@@ -14,13 +13,13 @@ namespace Portfolio.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(User user , string Password1,string Password2)
+        public IActionResult Index(User user, string Password1, string Password2)
         {
-            var password = context.Users.Where(u=>u.UserId == user.UserId).Select(u=>u.Password).FirstOrDefault();
+            var password = context.Users.Where(u => u.UserId == user.UserId).Select(u => u.Password).FirstOrDefault();
 
-            if(password==user.Password)
+            if (password == user.Password)
             {
-                if(Password1 == Password2)
+                if (Password1 == Password2)
                 {
                     user.Password = Password1;
                     context.Users.Update(user);

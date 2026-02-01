@@ -6,8 +6,8 @@ namespace Portfolio.Web.Entities
     {
         public int ProjectId { get; set; }
 
-        [MinLength(5,ErrorMessage = "Proje Adı en az 5 karakter olmalıdır.")]
-        [MaxLength(50,ErrorMessage = "Proje Adı en az 50 karakter olmalıdır.")]
+        [MinLength(5, ErrorMessage = "Proje Adı en az 5 karakter olmalıdır.")]
+        [MaxLength(50, ErrorMessage = "Proje Adı en az 50 karakter olmalıdır.")]
         [Required(ErrorMessage = "Proje adı boş geçilemez.")]
         public string ProjectName { get; set; }
 

@@ -7,7 +7,7 @@ namespace Portfolio.Web.ViewComponents.Default___Index
     {
         public IViewComponentResult Invoke()
         {
-            var values = context.Testimonials.ToList(); 
+            var values = context.Testimonials.ToList();
             return View(values);
         }
     }

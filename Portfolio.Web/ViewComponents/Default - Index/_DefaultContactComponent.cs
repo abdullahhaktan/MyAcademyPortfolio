@@ -3,7 +3,7 @@ using Portfolio.Web.Context;
 
 namespace Portfolio.Web.ViewComponents.Default___Index
 {
-    public class _DefaultContactComponent(PortfolioContext context):ViewComponent
+    public class _DefaultContactComponent(PortfolioContext context) : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

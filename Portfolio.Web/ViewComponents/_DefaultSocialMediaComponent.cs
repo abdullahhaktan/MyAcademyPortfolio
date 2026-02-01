@@ -3,7 +3,7 @@ using Portfolio.Web.Context;
 
 namespace Portfolio.Web.ViewComponents
 {
-    public class _DefaultSocialMediaComponent:ViewComponent
+    public class _DefaultSocialMediaComponent : ViewComponent
     {
         private readonly PortfolioContext _context;
 

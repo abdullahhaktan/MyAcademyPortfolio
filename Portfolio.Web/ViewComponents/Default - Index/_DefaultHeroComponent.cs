@@ -2,7 +2,7 @@
 
 namespace Portfolio.Web.ViewComponents.Default___Index
 {
-    public class _DefaultHeroComponent:ViewComponent
+    public class _DefaultHeroComponent : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

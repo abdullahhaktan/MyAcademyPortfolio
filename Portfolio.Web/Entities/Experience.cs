@@ -9,6 +9,6 @@
         public string? EndYear { get; set; }
         public string Company { get; set; }
         public string City { get; set; }
-        public string Description { get; set; }    
+        public string Description { get; set; }
     }
 }
