@@ -1,121 +1,162 @@
-# .Net 9.0 Portfolio Project
+# 💼 ASP.NET Core 9 Portfolio Management System
 
-[TR]
+> ASP.NET Core 9.0 MVC ile geliştirilmiş, Admin Panel destekli dinamik portföy yönetim sistemi  
+> A dynamic portfolio management system built with ASP.NET Core 9.0 MVC and an integrated Admin Panel
 
-**ASP.NET Core 9.0 MVC ile Geliştirilmiş Yönetici Panelli Portföy Sistemi**
-
-[![.NET Core](https://img.shields.io/badge/.NET_Core-9.0-purple.svg)](https://dotnet.microsoft.com/)
-[![C#](https://img.shields.io/badge/Language-C%23-blue.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
-[![GitHub repo size](https://img.shields.io/github/repo-size/abdullahhaktan/Net9PortfolioProject)](https://github.com/abdullahhaktan/Net9PortfolioProject)
-
----
-
-## 💻 Proje Hakkında
+[![.NET](https://img.shields.io/badge/.NET-9.0-512bd4?logo=dotnet)](https://dotnet.microsoft.com/)
+[![C#](https://img.shields.io/badge/Language-C%23-blue.svg)](https://learn.microsoft.com/dotnet/csharp/)
+[![Architecture](https://img.shields.io/badge/Pattern-MVC-blueviolet.svg)]()
+[![Database](https://img.shields.io/badge/Database-SQL_Server-CC2927.svg)](https://www.microsoft.com/sql-server)
+[![UI Theme](https://img.shields.io/badge/UI-Mantis_Bootstrap-7952B3?logo=bootstrap)](https://getbootstrap.com/)
 
 ---
 
-## ✨ Temel Özellikler
+## 🚀 Özellikler / Features
 
-### Mimari ve Teknolojiler
-
-* **ASP.NET CORE 9.0 MVC** mimarisi ve **C#** dili kullanılarak geliştirilmiştir.
-* Görsel katmanda **Razor View Engine** kullanılır.
-* **Entity Framework Core** ile veritabanı işlemleri yönetilir.
-
-### İşlevsel Özellikler ve Tasarım
-
-* Tamamen **Admin Paneli** destekli **dinamik verilerle** çalışan portföy sistemi.
-* Sistem yönetimi, **Controller** yapısı ve yönetimin kolaylaştırılması için **ViewComponent**'ler kullanılarak sağlanmıştır.
-* **Mantis-Bootstrap** ile güçlü ve modern tema desteği.
-* **Responsive tasarım** yapısı.
-
-# Nasıl Çalıştırılır
-
-# Depoyu Klonlayın ve Klasöre Girin
-
-* git clone https://github.com/abdullahhaktan/MyAcademyPortfolio.git
-* cd MyAcademyPortfolio
-
-# Context kısmında ilgili yol ve DB adını kendinizie göre ayarlayın ve migrasyonları ekleyip database i güncelleyin
-
-* add-migration InitialMigration
-* update-database
-* sonra projeyi başlatabileceksiniz
-
-
----
----
-
-[EN]
-
-## 💻 About the Project
+| 🇹🇷 Türkçe | 🇬🇧 English |
+|-----------|------------|
+| ASP.NET Core 9.0 MVC mimarisi | ASP.NET Core 9.0 MVC architecture |
+| Admin panel üzerinden tam yönetim | Full management via Admin panel |
+| Dinamik veri tabanlı portföy içerikleri | Dynamic database-driven portfolio content |
+| Entity Framework Core ile ORM yönetimi | ORM management with Entity Framework Core |
+| ViewComponent ile modüler UI yapısı | Modular UI structure using ViewComponents |
+| Responsive Bootstrap arayüz | Responsive Bootstrap interface |
+| Razor View Engine ile güçlü view yönetimi | View management with Razor View Engine |
 
 ---
 
-## ✨ Core Features
+## 🏗️ Mimari / Architecture
 
-### Architecture and Technologies
+```
+Net9PortfolioProject/
+├── Controllers/
+│
+├── Models/
+│
+├── ViewComponents/
+│
+├── Views/
+│
+├── Data/
+│
+├── Migrations/
+│
+└── wwwroot/
+```
 
-* Developed using the **ASP.NET CORE 9.0 MVC** architecture and **C#** language.
-* The **Razor View Engine** is utilized for the presentation layer.
-* Database operations are managed using **Entity Framework Core**.
+ASP.NET Core MVC katmanlı yapısı sayesinde sürdürülebilir ve genişletilebilir bir proje mimarisi sağlanmıştır.
 
-### Functional Features and Design
-
-* A **Portfolio system** that runs entirely on **dynamic data** with **Admin Panel** support.
-* System management is handled via **Controllers**, and administration is simplified using **ViewComponents**.
-* Strong and modern theme support with **Mantis-Bootstrap**.
-* **Responsive design** structure.
-
-# how to run
-
-# Clone the Repository and Navigate to the Folder
-
-* git clone https://github.com/abdullahhaktan/MyAcademyPortfolio.git
-* cd MyAcademyPortfolio
-
-# In the Context section, adjust the relevant path and DB name according to your setup, then add migrations and update the database.
-
-* add-migration InitialMigration
-* update-database
-* then you will be able to start project
+Provides a maintainable and scalable architecture using ASP.NET Core MVC layered structure.
 
 ---
 
-- 📸
+## 🧩 Kullanılan Tasarım Yaklaşımları / Design Approaches
 
-<img width="947" height="438" alt="foto5" src="https://github.com/user-attachments/assets/4d99e845-1120-4a62-b7c9-db8678367ecd" />
+### MVC Architecture
 
----
+Model-View-Controller mimarisi ile uygulama katmanları ayrıştırılmıştır.
 
-<img width="951" height="440" alt="foto4" src="https://github.com/user-attachments/assets/2166edd4-19bf-4d9b-a8c6-1b79a26a74a4" />
-
----
-
-<img width="940" height="439" alt="foto1" src="https://github.com/user-attachments/assets/2fcf192b-d434-4e44-b3b1-63911d935e4e" />
+Separates application layers using the Model-View-Controller architecture.
 
 ---
 
-<img width="947" height="438" alt="foto5" src="https://github.com/user-attachments/assets/4f3dc721-e838-41f9-bef9-b2b63f0dcb03" />
+### ViewComponent Structure
+
+Tekrarlayan UI bileşenleri yeniden kullanılabilir hale getirilmiştir.
+
+Reusable UI components implemented via ViewComponents.
 
 ---
 
-<img width="951" height="440" alt="foto4" src="https://github.com/user-attachments/assets/4e0033c1-fb83-4a38-b27e-d9d574b23a7d" />
+### Entity Framework Core (Code First)
+
+Migration yönetimi ile veritabanı kontrolü sağlanmaktadır.
+
+Database lifecycle managed via EF Core migrations.
 
 ---
 
-<img width="940" height="441" alt="foto3" src="https://github.com/user-attachments/assets/d515afe8-4811-4e8c-a886-682ab2df241b" />
+## 🛠️ Kullanılan Teknolojiler / Tech Stack
+
+| Katman / Layer | Teknoloji |
+|---------------|-----------|
+| Backend | ASP.NET Core 9.0 MVC |
+| ORM | Entity Framework Core |
+| UI Framework | Bootstrap (Mantis Template) |
+| View Engine | Razor |
+| Database | SQL Server |
+| Language | C# |
 
 ---
 
-<img width="938" height="443" alt="foto2" src="https://github.com/user-attachments/assets/f81be027-e56f-40f0-aece-b93942f31a7e" />
+## ⚙️ Kurulum / Setup
+
+### Gereksinimler / Requirements
+
+- .NET 9 SDK
+- SQL Server
+- Visual Studio 2022+
 
 ---
 
-<img width="936" height="440" alt="foto7" src="https://github.com/user-attachments/assets/128a601d-e9bd-40ab-9745-573583b2e77a" />
+### Adımlar / Steps
+
+```bash
+git clone https://github.com/abdullahhaktan/MyAcademyPortfolio.git
+cd MyAcademyPortfolio
+```
+
+**Connection string ayarını güncelleyin / Update connection string**
+
+`appsettings.json`
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.;Database=PortfolioDb;Trusted_Connection=True;"
+  }
+}
+```
+
+**Migration işlemlerini çalıştırın / Run migrations**
+
+```bash
+add-migration InitialMigration
+update-database
+```
+
+**Projeyi başlatın / Run the project**
+
+```bash
+dotnet run
+```
 
 ---
 
-<img width="934" height="436" alt="foto6" src="https://github.com/user-attachments/assets/150b675c-0f76-4394-9776-05a23272e532" />
+## 📸 Ekran Görüntüleri / Screenshots
 
-  
+<img src="https://github.com/user-attachments/assets/4d99e845-1120-4a62-b7c9-db8678367ecd" />
+
+<img src="https://github.com/user-attachments/assets/2166edd4-19bf-4d9b-a8c6-1b79a26a74a4" />
+
+<img src="https://github.com/user-attachments/assets/2fcf192b-d434-4e44-b3b1-63911d935e4e" />
+
+<img src="https://github.com/user-attachments/assets/4f3dc721-e838-41f9-bef9-b2b63f0dcb03" />
+
+<img src="https://github.com/user-attachments/assets/4e0033c1-fb83-4a38-b27e-d9d574b23a7d" />
+
+<img src="https://github.com/user-attachments/assets/d515afe8-4811-4e8c-a886-682ab2df241b" />
+
+<img src="https://github.com/user-attachments/assets/f81be027-e56f-40f0-aece-b93942f31a7e" />
+
+<img src="https://github.com/user-attachments/assets/128a601d-e9bd-40ab-9745-573583b2e77a" />
+
+<img src="https://github.com/user-attachments/assets/150b675c-0f76-4394-9776-05a23272e532" />
+
+---
+
+## 👨‍💻 Geliştirici / Developer
+
+**Abdullah Haktan**
+
+GitHub → https://github.com/abdullahhaktan
